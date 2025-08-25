@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Freshjal - Premium Packaged Water Landing Page
 
-## Getting Started
+A modern, luxury-themed Next.js landing page for Freshjal, a premium packaged water company that provides high-quality water bottles to corporates, restaurants, and shops. The water is inspired by Himalayan glacier mountains.
 
-First, run the development server:
+## 🌟 Features
 
+- **Modern Design**: Clean, luxury aesthetic with premium color schemes
+- **Responsive Layout**: Fully responsive design that works on all devices
+- **Smooth Animations**: Framer Motion animations for enhanced user experience
+- **Luxury Branding**: Premium typography and visual elements
+- **Interactive Elements**: Hover effects, smooth transitions, and engaging UI components
+
+## 🎨 Design Elements
+
+- **Color Scheme**: Blue gradients inspired by water and mountains
+- **Typography**: Playfair Display for headings, Inter for body text
+- **Icons**: Lucide React icons for consistent visual language
+- **Animations**: Floating elements, fade-in effects, and smooth transitions
+- **Glass Effects**: Modern glassmorphism design elements
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd freshjal.com
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## 🏗️ Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles and custom CSS
+│   ├── layout.tsx           # Root layout component
+│   └── page.tsx             # Main landing page
+├── components/               # Reusable components (if added later)
+└── ...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Hero Section**: Company name, tagline, and call-to-action buttons
+2. **About Section**: Company values and water quality features
+3. **Target Markets**: Corporate, restaurant, and retail shop offerings
+4. **Coming Soon**: Public availability announcement
+5. **Contact Section**: Contact information and business inquiries
+6. **Footer**: Company information and navigation links
 
-## Deploy on Vercel
+## 🎯 Target Audience
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Corporate Clients**: Office water dispensers and meeting room supplies
+- **Restaurants**: Table service and kitchen supplies
+- **Retail Shops**: Individual bottles and multi-pack options
+- **Future**: Individual consumers (coming soon)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Technologies Used
+
+- **Next.js 14**: React framework with App Router
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first CSS framework
+- **Framer Motion**: Animation library
+- **Lucide React**: Icon library
+- **Google Fonts**: Playfair Display and Inter
+
+## 📱 Responsive Design
+
+The landing page is fully responsive and optimized for:
+- Desktop (1024px+)
+- Tablet (768px - 1023px)
+- Mobile (320px - 767px)
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Start Production Server
+
+```bash
+npm start
+```
+
+### Deploy to Vercel
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically on every push
+
+## 🎨 Customization
+
+### Colors
+Update the color scheme in `globals.css` by modifying the CSS custom properties and Tailwind classes.
+
+### Content
+Edit the content in `page.tsx` to match your specific business requirements.
+
+### Images
+Replace placeholder content with actual product images and company photos.
+
+## 📞 Contact Information
+
+- **Phone**: +1 (555) 123-4567
+- **Email**: hello@freshjal.com
+- **Address**: 123 Water Street, City, State
+
+## 📄 License
+
+This project is proprietary to Freshjal. All rights reserved.
+
+---
+
+**Freshjal** - Crafted by nature, perfected for you, inspired by Himalayas glacier mountain.
