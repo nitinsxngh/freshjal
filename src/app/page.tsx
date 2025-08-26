@@ -117,7 +117,12 @@ export default function Home() {
               >
                 Get Quote
               </button>
-              <button className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              <button 
+                onClick={() => {
+                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              >
                 Learn More
               </button>
             </motion.div>
@@ -314,7 +319,10 @@ export default function Home() {
 
               {/* Call to Action */}
               <div className="space-y-4">
-                <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <button 
+                  onClick={() => window.location.href = '/quote'}
+                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
                   Get Quote Now
                 </button>
                 <p className="text-sm text-gray-500 text-center">
@@ -570,7 +578,10 @@ export default function Home() {
                   Custom branding available
                 </li>
               </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors">
+              <button 
+                onClick={() => window.location.href = '/quote'}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors"
+              >
                 Order Now
               </button>
             </motion.div>
@@ -613,7 +624,10 @@ export default function Home() {
                   Professional installation
                 </li>
               </ul>
-              <button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-medium transition-colors">
+              <button 
+                onClick={() => window.location.href = '/quote'}
+                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-medium transition-colors"
+              >
                 Get Quote
               </button>
             </motion.div>
@@ -656,7 +670,10 @@ export default function Home() {
                   Fast turnaround time
                 </li>
               </ul>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition-colors">
+              <button 
+                onClick={() => window.location.href = '/quote'}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition-colors"
+              >
                 Start Design
               </button>
             </motion.div>
@@ -785,7 +802,12 @@ export default function Home() {
               Join our waitlist to be the first to know when we launch.
             </motion.p>
             <motion.div variants={fadeInUp}>
-              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button 
+                onClick={() => {
+                  alert('Thank you for your interest! We\'ll notify you when Freshjal is available for individual consumers. For now, please contact us for corporate orders.');
+                }}
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
                 Join Waitlist
               </button>
             </motion.div>
