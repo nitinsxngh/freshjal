@@ -48,6 +48,7 @@ export default function Header() {
             <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
             <a href="#products" className="text-gray-700 hover:text-blue-600 transition-colors">Products</a>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            <a href="/mockup" className="text-gray-700 hover:text-blue-600 transition-colors">Mockup Designer</a>
             <button 
               onClick={() => window.location.href = '/quote'}
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
@@ -124,6 +125,13 @@ export default function Header() {
                     className="block text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 border-b border-gray-100"
                   >
                     Contact
+                  </a>
+                  <a 
+                    href="/mockup" 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors py-3 border-b border-gray-100"
+                  >
+                    Mockup Designer
                   </a>
                 </div>
                 
