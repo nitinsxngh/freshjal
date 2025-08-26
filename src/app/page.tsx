@@ -8,8 +8,6 @@ import {
   Phone, 
   Mail, 
   MapPin, 
-  Menu,
-  X,
   Building,
   Utensils,
   Store,
@@ -17,10 +15,10 @@ import {
   Mountain,
   Leaf
 } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0 }
@@ -81,39 +79,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 glass-effect">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-2"
-            >
-              <Droplets className="h-8 w-8 text-blue-600" />
-              <span className="text-2xl font-bold font-playfair text-gray-900">Freshjal</span>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="hidden md:flex space-x-8 items-center"
-            >
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-              <a href="#products" className="text-gray-700 hover:text-blue-600 transition-colors">Products</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-              <button 
-                onClick={() => window.location.href = '/quote'}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
-              >
-                Get Quote
-              </button>
-            </motion.div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         <div className="absolute inset-0 mountain-gradient opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
         
@@ -125,30 +94,30 @@ export default function Home() {
           >
             <motion.h1 
               variants={fadeInUp}
-              className="text-5xl md:text-7xl font-bold font-playfair text-gray-900 mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-playfair text-gray-900 mb-6 leading-tight"
             >
               <span className="gradient-text">Freshjal</span>
             </motion.h1>
             
             <motion.p 
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed"
             >
-              Crafted by nature, perfected for you,<br />
+              Crafted by nature, perfected for you,<br className="hidden sm:block" />
               <span className="font-semibold text-blue-600">inspired by Himalayas glacier mountain</span>
             </motion.p>
             
             <motion.div 
               variants={fadeInUp}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <button 
                 onClick={() => window.location.href = '/quote'}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Get Quote
               </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              <button className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Learn More
               </button>
             </motion.div>
@@ -952,57 +921,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <Droplets className="h-8 w-8 text-blue-400" />
-                <span className="text-2xl font-bold font-playfair">Freshjal</span>
-              </div>
-              <p className="text-gray-400 mb-4 max-w-md">
-                Crafted by nature, perfected for you, inspired by Himalayas glacier mountain. 
-                Premium packaged water for discerning clients.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#products" className="hover:text-white transition-colors">Products</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-                <li><a href="/quote" className="hover:text-white transition-colors">Get Quote</a></li>
-              </ul>
-            </div>
-            
-            <div className="flex flex-col space-y-6">
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Legal</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                  <li><a href="/terms" className="hover:text-white transition-colors">Terms & Conditions</a></li>
-                  <li><a href="/shipping" className="hover:text-white transition-colors">Shipping Policy</a></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Connect</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Freshjal. All rights reserved. Premium Himalayan water, crafted for excellence.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
